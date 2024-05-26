@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Nook</title>
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, sans-serif;
+    background-color: #f0f0f0; /* Changed background color */
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.page {
+    width: 400px;
+    height: 600px;
+    padding: 30px;
+    background-color: #a56800; /* Changed background color */
+    border-left: 30px solid #583503; /* Changed border color */
+    transform: rotate(-45deg) skewX(10deg) scale(0.8);
+    box-shadow: -50px 50px 50px rgba(0, 0, 0, 0.5);
+    transition: transform 2s;
+    cursor: pointer;
+}
+
+.page:hover {
+    transform: rotate(315deg) skewX(10deg) scale(0.8);
+}
+
+.page h1 {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-size: 25px;
+            color: #000000; /* Changed text color */
+            position: absolute; /* Added position absolute */
+            top: 50%; /* Positioned at the center vertically */
+            left: 50%; /* Positioned at the center horizontally */
+            transform: translate(-50%, -50%); /* Center alignment */
+            font-size: xx-large;
+        }
+
+
+.page p {
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    color: #34495e; /* Changed text color */
+}
+
+.page:before {
+    content: "";
+    width: 30px;
+    height: 100%;
+    background-color: #2c1601; /* Changed background color */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: skewY(-45deg) translate(-57px, -43px);
+}
+
+.page:after {
+    content: "";
+    width: 106%;
+    height: 30px;
+    background-color: #f0f0f0; /* Changed background color */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: skewX(-45deg) translate(-11px, 30px);
+}
+
+.caption {
+    text-align: center;
+    font-size: 20px;
+    color: #2c3e50; /* Changed text color */
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.caption:hover {
+    text-decoration: underline;
+    color: #2980b9; /* Changed text color on hover */
+}
+
+    </style>
+</head>
+<body>
+    <div class="center">
+        <div class="page" onclick="window.location.href='http://localhost/hack/dashboard.php'">
+            <h1>Book Nook</h1>
+            <div class="caption" onclick="window.location.href='http://localhost/hack/dashboard.php'"></div>
+        </div>
+    </div>
+</body>
+</html>
